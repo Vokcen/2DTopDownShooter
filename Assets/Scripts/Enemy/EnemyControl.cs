@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyControl : MonoBehaviour
 {
-
+    public CameraShake cam;
     float distance;
     [SerializeField] Base bs;
      
@@ -46,6 +46,7 @@ void Start()
         if (collision.gameObject.tag=="Bullet")
         {
             this.gameObject.SetActive(false);
+            
         }
     }
 }   

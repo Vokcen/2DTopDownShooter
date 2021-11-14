@@ -5,25 +5,27 @@ using UnityEngine;
 
 
 public  class Gun : MonoBehaviour
-{  
+{
 
-
+    public CameraShake cam;
 
 
 [SerializeField] Rigidbody2D rb; //Future needed.
 
 Vector2 movement;  //Future needed for maybe movement
-Vector2 mousePos; 
+Vector2 mousePos;
 
-
+    bool collide=false;
 private void Update()
  {
               GetValueFromMouse();
-}
+    
+
+    }
      private void FixedUpdate()
          {
   
-  
+    
      GunRotor();
      }
 
@@ -43,5 +45,6 @@ private void Update()
 
    rb.rotation=angle;
     }
+    
 
 }
