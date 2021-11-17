@@ -7,7 +7,6 @@ using UnityEngine;
 public  class Gun : MonoBehaviour
 {
 
-    public CameraShake cam;
 
 
 [SerializeField] Rigidbody2D rb; //Future needed.

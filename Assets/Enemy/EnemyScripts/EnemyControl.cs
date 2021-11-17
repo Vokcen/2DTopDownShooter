@@ -7,16 +7,25 @@ public class EnemyControl : MonoBehaviour
     public CameraShake cam;
     float distance;
     [SerializeField] Base bs;
-     
+    [SerializeField] HealthBar enemyHb;
 
-
+ [SerializeField] SpriteRenderer sprite;
 Transform playerPos;
    [SerializeField]float enemySpeed;
 
-void Start() 
-{
+
+    private void OnEnable()
+    {
+        enemyHb.hp = 100;
+        sprite.color=Color.yellow;
+        
+    }
+    void Start() 
+{     
+               
     playerPos=GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-}
+     
+    }
 
     void Update()
     {   
@@ -32,21 +41,40 @@ void Start()
     }
     void aiDamage()
     {
-        if (distance <= 3)
+        if (enemyHb.hp<=20)
         {
-            bs.health += -1;
-            this.gameObject.SetActive(false);
-           
+          sprite.color=Color.red;
+         
 
 
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag=="Bullet")
+        
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
         {
+            Debug.Log("detect");
+
+       
+            enemyHb.hp -= 5;
+            if (enemyHb.hp <= 0)
+            {
+                this.gameObject.SetActive(false);
+            }
+
+         
+
+        }   
+        if (collision.gameObject.tag == "Player")
+        {
+            bs.health += -1;
+            collision.GetComponentInChildren<HealthBar>().hp -= 10;
             this.gameObject.SetActive(false);
-            
         }
     }
 }   
