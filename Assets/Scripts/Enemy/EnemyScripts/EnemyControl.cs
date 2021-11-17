@@ -59,8 +59,11 @@ Transform playerPos;
         if (collision.gameObject.tag == "Bullet")
         {
             Debug.Log("detect");
-
-       
+        int damageAmount=Random.Range(100,200);
+         bool isCriticalHit=Random.Range(0,100)<30;
+         if (isCriticalHit)damageAmount*=2;
+      
+            DamagePopup.Create(transform.position,100,isCriticalHit);
             enemyHb.hp -= 5;
             if (enemyHb.hp <= 0)
             {
@@ -75,6 +78,7 @@ Transform playerPos;
             bs.health += -1;
             collision.GetComponentInChildren<HealthBar>().hp -= 10;
             this.gameObject.SetActive(false);
+        
         }
     }
 }   
