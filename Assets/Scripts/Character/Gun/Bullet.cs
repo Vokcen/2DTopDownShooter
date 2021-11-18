@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour
 {
     if (collision.gameObject.tag == "Enemy")
     {
-            StartCoroutine(cam.Shake(duration, magnitude));
+       
 
         }
 }

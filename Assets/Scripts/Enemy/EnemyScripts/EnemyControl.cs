@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class EnemyControl : MonoBehaviour
-{
+{ 
+    public float shakeTime;
+    public float shakePower;
     public CameraShake cam;
     float distance;
     [SerializeField] Base bs;
@@ -54,9 +57,10 @@ Transform playerPos;
     {
         if (collision.gameObject.tag == "Bullet")
         {    
-        
+               Camera.main.DOShakePosition(shakeTime,shakePower,10,90,true);
+
           
-      
+          collision.gameObject.SetActive(false);
       
       
         
@@ -68,6 +72,7 @@ Transform playerPos;
         
         if (isCriticalHit){
             damageAmount*=2;
+             Camera.main.DOShakePosition(0.5f,0.3f,10,90,true);
            
         }
             DamagePopup.Create(transform.position,damageAmount,isCriticalHit);
