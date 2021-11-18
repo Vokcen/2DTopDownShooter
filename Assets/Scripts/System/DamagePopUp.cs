@@ -32,12 +32,12 @@ private static int sortingOrder;
              textMesh.SetText(damageAmount.ToString());
              if (!isCriticalHit)
              {
-                  textMesh.fontSize=24;
+                  textMesh.fontSize=6;
                  textColor=Color.white;
              }
              else
              {
-              textMesh.fontSize=36;
+              textMesh.fontSize=16;
                 textColor=Color.red;
 
 
@@ -49,7 +49,7 @@ private static int sortingOrder;
               sortingOrder++;
               textMesh.sortingOrder=sortingOrder;
 
-             moveVector=new Vector3(0.7f,1)*30f;
+             moveVector=new Vector3(0.7f,0.3f)*30f;
     }
     private void Update()
      {
