@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6311563644816755343}
   - component: {fileID: 6311563644816755340}
   m_Layer: 0
-  m_Name: GameAssets
+  m_Name: ReferanceManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,4 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pfDamagePopup: {fileID: 6416234516510604274, guid: 385251cbb4da2974193dbe0e03fcaccb,
+    type: 3}
+  enemyBlue: {fileID: 5479795680903400549, guid: 1da2d183296db8f4fa7a22b321da373e,
     type: 3}

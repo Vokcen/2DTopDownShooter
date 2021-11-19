@@ -1,10 +1,10 @@
-    using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPool : MonoBehaviour
+public class EnemyBluePool : MonoBehaviour
 {
-  public static ObjectPool current; 
+  public static EnemyBluePool current; 
     public GameObject pooledObject;
     public int pooledAmount;
     public bool autoSize;
