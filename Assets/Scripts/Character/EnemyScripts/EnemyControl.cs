@@ -18,8 +18,8 @@ public class EnemyControl : MonoBehaviour
 
   
 
- [SerializeField] SpriteRenderer sprite;
-  public    Light2D eLight;
+ SpriteRenderer sprite;
+      Light2D eLight;
 Transform playerPos;
    [SerializeField]float enemySpeed;
        
@@ -37,9 +37,12 @@ Transform playerPos;
           eLight.intensity=1f;
         
     }
+     private void Awake() {
+         sprite=GetComponent<SpriteRenderer>();
+    eLight=GetComponentInChildren<Light2D>();    
+    }
     void Start()     
-{  
-    
+{ 
      enemy.EnemyHealth(hp);
    
      
@@ -77,9 +80,8 @@ enemy.HealthPopup(effectBar,healthBar,hurtspeed);
         {       
                Camera.main.DOShakePosition(0.5f,0.1f,10,90,true);
 
-              eLight.color=Color.blue;
-              sprite.color=eLight.color;
-              eLight.intensity+=3f;
+       
+              eLight.intensity-=0.2f;
           collision.gameObject.SetActive(false);
       
     

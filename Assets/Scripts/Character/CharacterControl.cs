@@ -12,10 +12,7 @@ namespace Velat{
         
          
        
-        public void EnemyBlueControl()
-        {
-           
-        }
+      
         public override void EnemyColor(Color enemyColor, Light2D enemyLight)
         { 
            enemyLight.color=enemyColor;
@@ -40,10 +37,7 @@ namespace Velat{
             return(float) health/maxHealth;
         }
 
-        public override void EnemyMove(Vector3 move)
-        {
-        }
-
+        
         public override int GetHealth()
         { 
              return  health;

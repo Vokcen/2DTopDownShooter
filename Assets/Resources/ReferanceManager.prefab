@@ -45,5 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfDamagePopup: {fileID: 6416234516510604274, guid: 385251cbb4da2974193dbe0e03fcaccb,
     type: 3}
-  enemyBlue: {fileID: 5479795680903400549, guid: 1da2d183296db8f4fa7a22b321da373e,
+  enemyBlue: {fileID: 7235546259865671013, guid: c545db469c40601448b7603bc731e7a2,
     type: 3}
+  _light: {fileID: 1138621920509725391, guid: d33db6110a0e89342bb865f26f500d51, type: 3}
