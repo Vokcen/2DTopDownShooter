@@ -5,6 +5,9 @@ using DG.Tweening;
 using UnityEngine.Experimental.Rendering.Universal;
 using Velat;
 using UnityEngine.UI;
+
+
+
 public class EnemyControl : MonoBehaviour
 { 
     
@@ -13,7 +16,8 @@ public class EnemyControl : MonoBehaviour
    int hp=100;
    int damageAmaount;
    CharacterControl enemy=new CharacterControl();
-   
+   [SerializeField]Bullet weaponty;
+
 [SerializeField]float hurtspeed;
 
   
@@ -29,7 +33,7 @@ Transform playerPos;
 
  
     private void OnEnable()
-    {    
+    {     enemy.EnemyHealth(hp);
      
           
           eLight.color=Color.yellow;
@@ -76,8 +80,13 @@ enemy.HealthPopup(effectBar,healthBar,hurtspeed);
     
     private void OnTriggerEnter2D(Collider2D collision)
     {  
+           
         if (collision.gameObject.tag == "Bullet")
-        {       
+        {
+          if (weaponty.SelectedWeapon==WeaponTypes.Red)
+     
+      
+
                Camera.main.DOShakePosition(0.5f,0.1f,10,90,true);
 
        
@@ -105,10 +114,15 @@ enemy.HealthPopup(effectBar,healthBar,hurtspeed);
            {
                gameObject.SetActive(false);
            }
+            }
+            if (collision.gameObject.tag=="Player")
+            {
+                Debug.Log("Yeşil düşman hasar vermeli!!");
+            }
      
          
 
         }   
         
     }
-}   
+

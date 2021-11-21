@@ -496,10 +496,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48101becbd49d2a4cab3ddb91e3c6072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponty: {fileID: 5594460993788791351, guid: d443d83f8b2522b45ad209224402521a,
+    type: 3}
   hurtspeed: 0.005
-  sprite: {fileID: 4621795877096597118}
-  eLight: {fileID: 4621795876591063931}
-  enemySpeed: 1.91
+  enemySpeed: 0.5
   effectBar: {fileID: 3374934138473163002}
   healthBar: {fileID: 3374934138314449916}
 --- !u!50 &1791052640232336221

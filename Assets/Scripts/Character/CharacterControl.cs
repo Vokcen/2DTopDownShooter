@@ -10,8 +10,24 @@ namespace Velat{
     
     
         
+    
          
-       
+         public override void  Weapon(WeaponType state)
+         {
+             if (state==WeaponType.Green)
+             {
+                 ChoseWeapon=WeaponType.Green;
+             }
+             else if (state==WeaponType.Red)
+             {
+                 ChoseWeapon=WeaponType.Red;
+
+             }
+             else if (state==WeaponType.Blue)
+             {
+                 ChoseWeapon=WeaponType.Blue;
+             }
+         }
       
         public override void EnemyColor(Color enemyColor, Light2D enemyLight)
         { 
@@ -55,5 +71,8 @@ namespace Velat{
             effectBar.fillAmount = healthBar.fillAmount;
         }
         }
+
+       
     }
+    
 }
