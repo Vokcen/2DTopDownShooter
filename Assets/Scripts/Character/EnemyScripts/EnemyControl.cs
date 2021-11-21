@@ -83,8 +83,8 @@ enemy.HealthPopup(effectBar,healthBar,hurtspeed);
            
         if (collision.gameObject.tag == "Bullet")
         {
-          if (weaponty.SelectedWeapon==WeaponTypes.Red)
-     
+          if (weaponty.SelectedWeapon==WeaponTypes.Green)
+             {
       
 
                Camera.main.DOShakePosition(0.5f,0.1f,10,90,true);
@@ -122,7 +122,7 @@ enemy.HealthPopup(effectBar,healthBar,hurtspeed);
      
          
 
-        }   
+        }    }  } 
         
-    }
+    
 

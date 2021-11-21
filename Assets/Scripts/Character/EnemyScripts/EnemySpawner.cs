@@ -5,7 +5,7 @@ using UnityEngine;
 public class  EnemySpawner  : MonoBehaviour
 {
 
-    public GameObject enemySpawner;
+
     public Transform[] SpawnPoints;
     public float spawnTime;
 

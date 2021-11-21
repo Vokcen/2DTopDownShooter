@@ -19,6 +19,7 @@ public class EnemyBlue : MonoBehaviour
     [SerializeField]float enemySpeed;
    [SerializeField] Image effectBar;
      [SerializeField] Image healthBar;
+     [SerializeField]Bullet bullet;
 
  CharacterControl enemyBlue= new CharacterControl();  
 
@@ -58,7 +59,10 @@ public class EnemyBlue : MonoBehaviour
 private void OnTriggerEnter2D(Collider2D other)
  {
      if (other.gameObject.tag == "Bullet")
-        {       
+        { if (bullet.SelectedWeapon==WeaponTypes.Blue)
+        {
+            
+           
                Camera.main.DOShakePosition(0.5f,0.1f,10,90,true);
 
        
@@ -88,7 +92,11 @@ private void OnTriggerEnter2D(Collider2D other)
            }
      
          
-
+              } 
+        }
+        if (other.gameObject.tag=="Player")
+        {
+            Debug.Log("mavi düşman değdi sonradan eklenmeli");
         }   
 }
 }
