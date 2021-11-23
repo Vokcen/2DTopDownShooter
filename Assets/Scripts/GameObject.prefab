@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6311563644816755341
+--- !u!1 &6717213971236747504
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6311563644816755343}
-  - component: {fileID: 6311563644816755340}
+  - component: {fileID: 7368438575585462167}
+  - component: {fileID: 6385389060640316063}
   m_Layer: 0
-  m_Name: ReferanceManager
+  m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6311563644816755343
+--- !u!4 &7368438575585462167
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6311563644816755341}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5438054, y: -0.79306513, z: 2.8633175}
+  m_GameObject: {fileID: 6717213971236747504}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.1177218, y: 18.54819, z: 13.818979}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6311563644816755340
+--- !u!114 &6385389060640316063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6311563644816755341}
+  m_GameObject: {fileID: 6717213971236747504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31cb9417f69f17f47b7504df7ae7a770, type: 3}
+  m_Script: {fileID: 11500000, guid: b27e940e26514484683f8fbcb8c01729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pfDamagePopup: {fileID: 6416234516510604274, guid: 385251cbb4da2974193dbe0e03fcaccb,
-    type: 3}
-  _levelSelect: {fileID: 6385389060640316063, guid: c6d6dddf967da1140958757a6110ad2f,
-    type: 3}
+  _levelSelector: 0

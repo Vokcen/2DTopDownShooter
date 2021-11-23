@@ -16,8 +16,8 @@ public class  GameAssets : MonoBehaviour
     
 
     public Transform pfDamagePopup;
-    public SpriteRenderer enemyBlue;
-    public Light2D _light; 
+    public LevelSelector _levelSelect;
+  
    
    
     

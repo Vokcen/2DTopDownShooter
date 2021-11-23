@@ -9,12 +9,17 @@ public  class Gun : MonoBehaviour
 
 
 
-[SerializeField] Rigidbody2D rb; //Future needed.
+Rigidbody2D rb; //Future needed.
 
 Vector2 movement;  //Future needed for maybe movement
 Vector2 mousePos;
 
     bool collide=false;
+
+     private void Start() {
+         rb=GetComponent<Rigidbody2D>();
+        
+    }
 private void Update()
  {
               GetValueFromMouse();

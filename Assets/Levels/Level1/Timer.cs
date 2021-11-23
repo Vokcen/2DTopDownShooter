@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public  class Timer:MonoBehaviour
@@ -44,7 +45,7 @@ ara_sahne3.AddListener(AraSahne3);
     
      if (goal<=CurrentPoint)
      {
-         Debug.Log("Görev tamam");
+         SceneManager.LoadScene("Level2Scene");
      }
  }
    void AraSahne1()

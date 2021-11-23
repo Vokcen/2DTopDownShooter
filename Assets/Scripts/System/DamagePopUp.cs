@@ -50,6 +50,7 @@ private static int sortingOrder;
               textMesh.sortingOrder=sortingOrder;
 
              moveVector=new Vector3(0.7f,0.3f)*30f;
+               transform.rotation=Quaternion.LookRotation(Camera.main.transform.position);
     }
     private void Update()
      {

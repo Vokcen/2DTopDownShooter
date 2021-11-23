@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -193,6 +193,12 @@ Transform:
   m_Father: {fileID: 361666576}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 102.239006}
+--- !u!1 &214762704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4735324167756859063, guid: 3dc96b9057c153d41a463febb7ecec9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5937920068662255980}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &361666575
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,8 +672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e95963db2b9f084abe7227d0dbc4590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pooledObject: {fileID: 7235546259865671035, guid: c545db469c40601448b7603bc731e7a2,
-    type: 3}
+  pooledObject: {fileID: 1120632451}
   pooledAmount: 5
   autoSize: 0
 --- !u!1 &905799680
@@ -853,6 +858,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1120632451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5114170808770343487, guid: 84f4b73e64f0d194e86f6a6adfab9085,
+    type: 3}
+  m_PrefabInstance: {fileID: 7079471697444005442}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1120899185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,7 +1133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 1
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
+  m_FalloffIntensity: 0.382
   m_Color: {r: 0.6509434, g: 0, b: 0, a: 1}
   m_Intensity: 1.22
   m_LightVolumeOpacity: 0.197
@@ -1143,7 +1154,7 @@ MonoBehaviour:
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
   m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: -22.96, y: 0}
+  m_ShapeLightFalloffOffset: {x: -23.56, y: 0}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
   - {x: 0.5, y: -0.5, z: 0}
@@ -1866,6 +1877,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 5753914664963698841, guid: 62933b6234afc37469267340f045446c,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 214762704}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62933b6234afc37469267340f045446c, type: 3}
 --- !u!1001 &5937920068662255980
